@@ -1,0 +1,13 @@
+Steps of compilation
+
+[1] make
+	to generate static library and executable
+
+[2] make clean
+	to remove object files, executable files and library
+
+Steps to run program
+./statically_linked
+	this will print the comments 1. from Main.c 2. from static library
+
+
