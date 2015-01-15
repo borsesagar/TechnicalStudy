@@ -1,1 +1,1 @@
-void
+void CallLib(void);
