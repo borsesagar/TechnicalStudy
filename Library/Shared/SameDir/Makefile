@@ -12,6 +12,8 @@ LIB = -lmean
 
 NAME = dynamically_linked
 
+ENVVARIABLE = :$LD_LIB_PATH
+
 RM = rm -rf
 
 all: $(LIBTARGET) $(TARGET)
@@ -22,7 +24,7 @@ $(LIBTARGET): $(LIBTARGET).c
 
 $(TARGET): $(TARGET).c
 	$(CC) -L. -Wall $(TARGET).c -o $(NAME) $(LIB)
-	export LD_LIB_PATH =L.:$LD_LIB_PATH
+	export LD_LIB_PATH=$(CURDIR)$(ENVVARIABLE)
 
 clean:
 	$(RM) $(LIBNAME).so $(LIBTARGET).o $(TARGET).o $(NAME)
