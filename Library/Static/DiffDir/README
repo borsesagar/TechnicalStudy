@@ -1,1 +1,5 @@
-.
+Steps to compile
+[1] make
+	compiles static library and prog
+[2] make clean
+	cleans up library, object file and executables

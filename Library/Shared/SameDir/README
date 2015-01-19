@@ -1,0 +1,5 @@
+Steps to compile
+[1] make
+	generates dynamic library and program
+[2] make clean
+	cleans up object files, executable and library 
