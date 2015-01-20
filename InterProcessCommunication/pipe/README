@@ -1,5 +1,5 @@
 Steps to compile
 [1] make
-	compiles program fork
+	compiles program 
 [2] make clean
 	clean up 
