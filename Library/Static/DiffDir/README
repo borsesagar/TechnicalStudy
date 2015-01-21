@@ -1,5 +1,14 @@
+Description
+	This program creates Static library which is present in different directory. It displays prints first from Main.c and then Static library
+ 
 Steps to compile
 [1] make
 	compiles static library and prog
 [2] make clean
 	cleans up library, object file and executables
+
+Output
+./statically_linked 
+In Main.c
+CallLib() from Library
+

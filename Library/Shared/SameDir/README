@@ -1,3 +1,6 @@
+Description
+	This program creates dynamic library and displays prints first from Main.c and then dyn
+
 Steps to compile
 [1] make
 	generates dynamic library and program
