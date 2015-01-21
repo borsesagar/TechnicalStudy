@@ -28,14 +28,18 @@ int main(void)
 		exit(1);
 	}
 	//Receive an ans of message type 1.
-	if (msgrcv(msgId, &rBuf, MAXSIZE, 1, 0) < 0)
+	printf("Received Message/s is/are: \n");
+	for(;;) //this never quits
 	{
-		printf("%d, %d, %s, %d\n", msgId, rBuf.msgType, rBuf.msgText);
-		perror("msgsnd");
-		exit(1);
+		if (msgrcv(msgId, &rBuf, MAXSIZE, 1, 0) < 0)
+		{
+			printf("%d, %d, %s, %d\n", msgId, rBuf.msgType, rBuf.msgText);
+			perror("msgsnd");
+			exit(1);
+		}
+		else
+			printf(" %s\n", rBuf.msgText);
 	}
-	else
-		printf("Received Message is:::: %s\n", rBuf.msgText);
 
 	
 	return 0;

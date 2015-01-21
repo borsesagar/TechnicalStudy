@@ -29,22 +29,27 @@ int main(void)
 		exit(1);
 	}
 	sBuf.msgType = 1;
-
-	printf("Enter a message to add to message queue\n");
-	scanf("%s", sBuf.msgText);
 	
-	bufLen = strlen(sBuf.msgText) + 1;
-
-	if (msgsnd(msgId, &sBuf, bufLen, IPC_NOWAIT) < 0)
+	printf("Please write your message\n");
+	while (fgets(sBuf.msgText, sizeof(sBuf.msgText), stdin) != NULL)
 	{
-		printf("%d, %d, %s, %d\n", msgId, sBuf.msgType, sBuf.msgText);
-		perror("msgsnd");
-		exit(1);
-	}
+		bufLen = strlen(sBuf.msgText) + 1;
+		if (msgsnd(msgId, &sBuf, bufLen, IPC_NOWAIT) < 0) //Send the message
+		{
+			printf("%d, %d, %s, %d\n", msgId, sBuf.msgType, sBuf.msgText);
+			perror("msgsnd");
+			exit(1);
+		}
 	else
 		printf("Message Sent!!\n");
+	}
 
-	exit(0);
+	if (msgctl(msgId, IPC_RMID, NULL) < 0) //Destroy msg queue
+	{
+		perror("msgctl");
+		exit(1);
+	}
+	return 0;
 }
 
 
