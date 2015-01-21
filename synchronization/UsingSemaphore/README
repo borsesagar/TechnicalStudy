@@ -1,5 +1,21 @@
+Description
+	This program creates two threads which shares one variable(counter). The access of this shared variable is secured using Semaphore lock. Thread 2 would not access shared variable untill thread 1 finishes its execution.
+
+
+
 Steps to compile
 [1] make
 	compiles program ThreadSync
 [2] make clean
 	clean up 
+
+Output
+
+ ./ThreadSync 
+Thread 1 is now entering the thread function. 
+Thread 2 is now entering the thread function. 
+Thread 1 is now leaving the thread function. 
+Value of counter is : 1
+Thread 2 is now leaving the thread function. 
+Value of counter is : 2
+
