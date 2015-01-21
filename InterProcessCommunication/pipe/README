@@ -1,5 +1,15 @@
+Description
+	This program creates two processes using fork and creates a pipe. Child process asks for a small messageand writes to pipe and Parent process reads the message from the pipe and displays.
+
+
 Steps to compile
 [1] make
 	compiles program 
 [2] make clean
 	clean up 
+
+Output
+
+./Pipe 
+Enter a small message: hello
+Message Entered Was :: hello
