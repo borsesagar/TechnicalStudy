@@ -1,5 +1,15 @@
+Description
+	This program creates two threads using pthread_create() system call and displays the prints according to the thread ID
+
 Steps to compile
 [1] make
 	compiles program thread
 [2] make clean
 	clean up 
+
+Output
+./thread
+thread created successfully
+thread created successfully
+Second thread processing
+First thread processing
