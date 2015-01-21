@@ -1,6 +1,7 @@
 Description:
 	This program implements concept of message queue. The Server.c program create the shared memory and
-	then listens for the changes made by client and displays on standard output.
+	then listens for the changes made by client and displays on standard output. To quit the program send
+	'q' character.
 	Note:- Please run Server program first in a terminal and then run Client program in different terminal. 	Write a character in Client terminal and receives the same in Server terminal.  
 
 
