@@ -1,5 +1,21 @@
+Description
+	This program creates two threads which shares one variable(counter). The access of this shared variable is secured using mutex lock. Thread 2 would not access shared variable untill thread 1 finishes its execution.
+
 Steps to compile
 [1] make
 	compiles program ThreadSync
 [2] make clean
 	clean up 
+
+Output 
+
+[root@localhost UsingMutex]# ./ThreadSync 
+
+Job 1 started
+
+Job 1 finished
+
+Job 2 started
+
+Job 2 finished
+
