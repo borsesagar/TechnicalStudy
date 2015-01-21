@@ -1,5 +1,17 @@
+Description
+	This program ignores the SIGINT signal(Ctrl+c) and start executing signal handler which confirms to quite. 
+
 Steps to compile
 [1] make
 	compiles program
 [2] make clean
 	clean up 
+
+Output
+
+./Signal 
+
+^C
+Ctrl-C pressed!!
+Do you really want to quite [y/n]?
+y
