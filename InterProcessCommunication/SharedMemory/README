@@ -1,13 +1,12 @@
 Description:
-	This program implements concept of message queue. The Server.c program create the shared memory and
-	then listens for the changes made by client and displays on standard output. To quit the program send
-	'q' character.
-	Note:- Please run Server program first in a terminal and then run Client program in different terminal. 	Write a character in Client terminal and receives the same in Server terminal.  
+	This program implements concept of message queue. The Server.c program create the shared memory and then listens for the changes made by client and displays on standard output. To quit the program send 'q' character
+
+Note:- Please run Server program first in a terminal and then run Client program in different terminal. Write a character in Client terminal and receives the same in Server terminal.  
 
 
 Steps to compile
 [1] make
-	compiles Server.c program first as this creates shared memory and then compiles Client.c
+	compiles both Server.c and Client.c
 [2] make clean
 	clean up 
 
