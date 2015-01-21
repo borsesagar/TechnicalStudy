@@ -3,7 +3,6 @@
 
 int main(void)
 {
-
 	double v1, v2, m;
 	v1 = 5.5;
 	v2 = 7.9;

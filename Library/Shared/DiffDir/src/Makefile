@@ -4,6 +4,7 @@ NAME = dynamically_linked
 LIB = -lmean
 DIR = -L../lib
 RM = rm -rf
+ENVVARIABLE = :$LD_LIB_PATH
 
 all: $(TARGET)
 	
