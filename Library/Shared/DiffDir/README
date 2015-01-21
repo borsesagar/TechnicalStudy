@@ -1,0 +1,8 @@
+Description
+	This program creates a dynamic library named "CalcMean" which executes mean value of two variables. The library code and source code are present in different dir
+
+Steps to compile
+[1] make
+	generates dynamic library and program
+[2] make clean
+	cleans up object files, executable and library 
