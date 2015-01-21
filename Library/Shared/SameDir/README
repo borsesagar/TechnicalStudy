@@ -1,5 +1,6 @@
 Description
-	This program creates dynamic library and displays prints first from Main.c and then dyn
+	This program creates a dynamic library named "CalcMean" which executes mean value of two variables. The library code and source code are present in different dir
+
 
 Steps to compile
 [1] make
