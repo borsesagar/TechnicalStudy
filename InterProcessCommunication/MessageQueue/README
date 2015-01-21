@@ -1,5 +1,26 @@
+Description
+	SendMsgQue.c program creates Message queue and asks for input message and sends this message to message queue. ReceiveMsgQue.c program receives the message from message queue and displays the message on terminal.
+Note: please run SendMsgQue first and then ReceiveMsgQue in seperate terminals.
+
 Steps to compile
 [1] make
-	compiles program
+	compiles both SendMsgQue.c and ReceiveMsgQue.c 
 [2] make clean
 	clean up 
+
+Output
+
+Terminal 1
+
+./SendMsgQue 
+Please write your message
+hi, how are you 
+Message Sent!
+
+
+Terminal 2
+
+./ReceiveMsgQue 
+Received Message/s is/are: 
+hi, how are you
+
