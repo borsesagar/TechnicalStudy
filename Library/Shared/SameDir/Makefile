@@ -12,7 +12,7 @@ LIB = -lmean
 
 NAME = dynamically_linked
 
-ENVVARIABLE = :$LD_LIB_PATH
+ENVVAR = LD_LIBRARY_PATH
 
 RM = rm -rf
 
@@ -23,8 +23,10 @@ $(LIBTARGET): $(LIBTARGET).c
 	$(CC) -shared -o $(LIBNAME).so $(LIBTARGET).o
 
 $(TARGET): $(TARGET).c
-	$(CC) -L. -Wall $(TARGET).c -o $(NAME) $(LIB)
-	export LD_LIB_PATH=$(CURDIR)$(ENVVARIABLE)
+	$(CC) -L. -Wall -o $(NAME) $(TARGET).c $(LIB)
+	$(ENVVAR)=$(CURDIR):$$$(ENVVAR)
+	export $(ENVVAR)=$(CURDIR):$$$(ENVVAR)
+
 
 clean:
 	$(RM) $(LIBNAME).so $(LIBTARGET).o $(TARGET).o $(NAME)
