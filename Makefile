@@ -12,7 +12,8 @@ SIGNALPATH = Signal
 IPCPIPEPATH = InterProcessCommunication/pipe
 IPCMSGQUEPATH = InterProcessCommunication/MessageQueue
 IPCSHMPATH = InterProcessCommunication/SharedMemory
-TARGET = statsamedir statdiffdir dynsamedir dyndiffdir fork thread synmutex synsema signal ipcpipe ipcmsgque ipcshm
+SOCKETPATH = Socket
+TARGET = statsamedir statdiffdir dynsamedir dyndiffdir fork thread synmutex synsema signal ipcpipe ipcmsgque ipcshm socket
 
 all: $(TARGET)
 
@@ -52,6 +53,9 @@ ipcmsgque:
 ipcshm:
 	$(CD) $(IPCSHMPATH); make
 
+socket:
+	$(CD) $(SOCKETPATH); make
+
 clean:
 	$(CD) $(STATSAMEDIRPATH); make clean
 	$(CD) $(STATDIFFDIRPATH); make clean
@@ -65,4 +69,4 @@ clean:
 	$(CD) $(IPCPIPEPATH); make clean
 	$(CD) $(IPCMSGQUEPATH); make clean
 	$(CD) $(IPCSHMPATH); make clean
-
+	$(CD) $(SOCKETPATH); make clean
