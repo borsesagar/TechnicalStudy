@@ -1,0 +1,17 @@
+Description
+	This is a simple server-client program using UDP sockets for the transmission. Basically the client sends a message to the server, the server converts the message to uppercase and returns it to the client.
+
+Note: Please run Server first in one terminal and client in another terminal
+
+Steps to compile
+[1] make
+	complites both server.c and client.c
+[2] make clean
+	clean up
+
+Output ./client 
+Type a sentence to send to server:
+hello
+You typed: hello
+Received from server: HELLO
+
