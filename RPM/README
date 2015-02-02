@@ -1,0 +1,23 @@
+Description
+	This is a activity to create rpm package.
+	To create an RPM package please perform below steps 
+	
+	[1] Create a directory ~/rpmbuild in any location
+	[2] fire this command to create RPM hierarchy: mkdir -p {RPMS, SRPMS, BUILD, SOURCE, SPECS, tmp} 
+	[3] in SOURCE directory, copy the source code and create a tarball
+		tar -xcvf test-1.0.tar.gz test
+	    here test-1.0 is the name of the tarball with version and release.
+	[4] create a .spec file  in SPECS directory
+		see test.spec file for reference 
+	[5] run following command for creating rpm package
+		rpmbuild -bb -v test.spec
+	    this will create a RPM package in RPMS/x86_64 directory. 
+
+	[6] to install this RPM package, fire below command
+		rpm -ivh test-1.0-1.x86_64.rpm
+	[7] to uninstall this RPM package, 1st search it using 
+		rpm -qa | grep test
+    	    then use the searched string in below command
+		rpm -e test-1.0-1.x86_64.rpm
+
+
