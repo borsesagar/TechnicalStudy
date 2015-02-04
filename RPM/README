@@ -3,7 +3,7 @@ Description
 	To create an RPM package please perform below steps 
 	
 	[1] Create a directory ~/rpmbuild in any location
-	[2] fire this command to create RPM hierarchy: mkdir -p {RPMS, SRPMS, BUILD, SOURCE, SPECS, tmp} 
+	[2] fire this command to create RPM hierarchy: mkdir -p {RPMS,SRPMS,BUILD,SOURCE,SPECS,tmp} 
 	[3] in SOURCE directory, copy the source code and create a tarball
 		tar -xcvf test-1.0.tar.gz test
 	    here test-1.0 is the name of the tarball with version and release.
