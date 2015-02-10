@@ -1,1 +1,44 @@
 Description
+	This sample module which takes 3 parameters. An integer(EmpID) a string(First Name) and int array having 3 elements. Entered values can be seen in dmesg
+
+Steps to compile
+[1] make
+	compiles module and generate HelloWorld.ko
+[2] make clean
+	clean up
+
+Outout
+
+insmod ./HelloWorkd.ko (without param)
+dmesg
+[ 1027.913475] Hello World
+
+
+[ 1027.913475] First Name Entered: Sagar
+[ 1027.913475] Employee ID : 50886
+[ 1027.913475] Array
+[ 1027.913475] Arr[0]
+[ 1027.913475] -1
+[ 1027.913475] Arr[1]
+[ 1027.913475] 0
+[ 1027.913475] Arr[2]
+[ 1027.913475] 1
+
+rmmod HelloWorld
+
+insmod ./HelloWorld.ko myEmp=12345 myName="abcd" myArr=1,2,3
+demsg
+[ 1842.026386] Hello World
+
+
+[ 1842.026391] First Name Entered: abcd
+[ 1842.026392] Employee ID : 12345
+[ 1842.026393] Array
+[ 1842.026393] Arr[0]
+[ 1842.026394] 1
+[ 1842.026395] Arr[1]
+[ 1842.026395] 2
+[ 1842.026396] Arr[2]
+[ 1842.026396] 3
+
+
