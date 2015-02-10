@@ -1,1 +1,27 @@
 Description
+	There are two modules named ModA.c and ModB.c. ModA.c exports a function called ExportFunction() using EXPORT_SYMBOL and ModB.c program uses this exported function.
+
+Note:- All the symbols that the kernel is aware of is listed in /proc/kallsyms 
+Steps to compile
+[1] make 
+	compiles both ModA.c and ModB.c
+[2] make clean
+	clean up
+
+output
+
+insmod ModA.ko
+insmod ModB.ko
+
+rmmod ModB.ko
+rmmod ModA.ko
+
+dmesg 
+
+[20371.158710] ModA init done
+[20376.367725] ModB init done
+[20376.367729] ModA exporting ExportFunction()
+[20485.703346] ModB exiting
+[20489.918955] ModA Exiting
+
+
